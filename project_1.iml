@@ -4,11 +4,12 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="1fa83877-49ba-40ad-9f07-f7a5c3a05b32" />
+    <option name="uniqueId" value="0e88faf2-0546-4a20-91f5-619cc758fe6e" />
   </component>
 </module>

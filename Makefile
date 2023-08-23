@@ -14,12 +14,21 @@ SRC_FILES := $(wildcard $(SRC_DIR)/*.java)
 # Convert source files into corresponding class file paths
 CLASS_FILES := $(patsubst $(SRC_DIR)/%.java,$(BIN_DIR)/%.class,$(SRC_FILES))
 
+# Detect the operating system
+ifeq ($(OS),Windows_NT)
+	RM = del /Q
+	SEP = \\
+else
+	RM = rm -f
+	SEP = /
+endif
+
 # Default target
 all: $(BIN_DIR)/project_1.jar
 
 # Compile .java files to .class files
 $(BIN_DIR)/%.class: $(SRC_DIR)/%.java
-	@mkdir -p $(BIN_DIR)
+	@if not exist $(BIN_DIR) mkdir $(BIN_DIR)
 	$(JC) $(JFLAGS) $<
 
 # Create a JAR file
@@ -32,7 +41,7 @@ run: $(BIN_DIR)/project_1.jar
 
 # Clean the generated files
 clean:
-	rm -rf $(BIN_DIR)
+	$(RM) $(BIN_DIR)$(SEP)*.class $(BIN_DIR)$(SEP)project_1.jar
 
 # PHONY targets (targets that are not actual file names)
-.PHONY: all clean
+.PHONY: all clean run

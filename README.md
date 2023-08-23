@@ -1,6 +1,6 @@
-# Hello World Java Project
+# AUK SDT 100: Principles of Programming FA23: Project 1. Development environment
 
-This is a simple "Hello World" Java project that demonstrates how to use a Makefile to compile and run Java code. The project contains a basic Java program that prints "Hello, World!" to the console.
+This is first project of Principles of Programming subject at AUK. The project contains a basic Java program that prints "Hello, World!" to the console.
 
 ## Project Structure
 ```
